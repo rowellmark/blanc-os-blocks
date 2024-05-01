@@ -60,29 +60,6 @@ class Config
     {
         foreach (self::getBlocksName() as $block_name) {
             register_block_type(self::getBasePath() . '/build/blocks/' . $block_name);
-
-            // Enqueue styles per block
-            wp_enqueue_style(
-                'gutenberg-block-' . $block_name . '-style',
-                BLANCSTUDIO_BLOCKS_URL. 'build/blocks/'. $block_name .'/style-index.css',
-                [],
-                BLANCSTUDIO_BLOCKS_VERSION,
-                FALSE
-            );
-
-
-            // for editor only
-            add_action('enqueue_block_editor_assets', function () {
-                foreach (self::getBlocksName() as $block_name) {
-                    wp_enqueue_style(
-                        'gutenberg-block-' . $block_name . '-style',
-                        BLANCSTUDIO_BLOCKS_URL . 'css/' . $block_name . 'index.css',
-                        [],
-                        BLANCSTUDIO_BLOCKS_VERSION
-                    );
-                }
-            });
-
         }
     }
 
