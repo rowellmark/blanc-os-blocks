@@ -58,7 +58,9 @@ class Config
         foreach ($contents as $item) {
         
             if ($item != "." && $item != "..") {
-                $blocks[] = $item;               
+                $blocks[] = $item;             
+                
+                var_dump($item);
             }
         };
 
