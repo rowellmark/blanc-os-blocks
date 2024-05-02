@@ -26,6 +26,7 @@ if (!defined('ABSPATH')) {
 
 define('BLANCSTUDIO_BLOCKS_VERSION', '0.1.0');
 define('BLANCSTUDIO_BLOCKS_URL', plugin_dir_url(__FILE__));
+define('BLANCSTUDIO_BLOCKS_PATH', plugin_dir_path(__FILE__));
 define('BLANCSTUDIO_BLOCKS_INC_URL', BLANCSTUDIO_BLOCKS_URL . 'assets/');
 
 /**

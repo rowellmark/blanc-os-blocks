@@ -1,8 +1,11 @@
 <?php
+
 /**
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
+
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Blancstudio Blocks – hello from a dynamic block!', 'blancstudio-blocks' ); ?>
-</p>
+<div <?php echo get_block_wrapper_attributes(); ?>>
+	<h2> <?php echo $attributes['title'] ?></h2>
+	<p> <?php echo $attributes['description'] ?></p>
+</div>

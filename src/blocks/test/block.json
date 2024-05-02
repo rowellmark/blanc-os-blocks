@@ -11,6 +11,16 @@
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Hello World!"
+		},
+		"description": {
+			"type": "string",
+			"default": "This is description"
+		}
+	},
 	"textdomain": "blancstudio-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

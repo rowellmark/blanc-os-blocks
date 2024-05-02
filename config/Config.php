@@ -50,10 +50,19 @@ class Config
 
     public static function getBlocksName(): array
     {
-        return [
-            'test',
-            'test2'
-        ];
+
+        $blocks = [];
+
+        $contents = scandir(BLANCSTUDIO_BLOCKS_PATH . 'src/blocks');
+
+        foreach ($contents as $item) {
+        
+            if ($item != "." && $item != "..") {
+                $blocks[] = $item;               
+            }
+        };
+
+        return $blocks;
     }
 
     public static function gutenbergBlocksInit(): void
